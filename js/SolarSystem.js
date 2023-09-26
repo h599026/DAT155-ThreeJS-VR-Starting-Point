@@ -80,8 +80,9 @@ export class SolarSystem {
      * @param widthSegments : number
      * @param heightSegments : number
      * @param assetUrl : URL
-     * @param materialType : Material.type
      * @param color : Color
+     * @param MaterialType : Material
+     * @param shininess : number
      * @param normalMapUrl : URL
      * @param specularMapUrl : URL
      */
