@@ -14,19 +14,25 @@ const near = 0.1;
 const far = 100;
 
 const camera = new PerspectiveCamera(fov, aspect, near, far);
+// Flytter camera vekk fra sentrum, vil ikke ha noe effekt i VR
 camera.position.setZ(30);
+
 
 const canvas = document.createElement('canvas');
 const context = canvas.getContext('webgl2');
 
 const renderer = new WebGLRenderer({canvas, context});
-renderer.setClearColor(0x000000);
+renderer.setClearColor(0x000000); // "Bakgrunnsfarge"
 renderer.setSize(width, height);
 
+// Dette er for å ha og aktivere VR
 document.body.appendChild(VRButton.createButton(renderer));
 renderer.xr.enabled = true;
+// end
+
 
 document.body.appendChild(renderer.domElement);
+
 
 const controls = new OrbitControls(camera, renderer.domElement);
 controls.enableDamping = true;
@@ -46,6 +52,7 @@ window.addEventListener('resize', () => {
 const scene = new Scene();
 const solarSystem = new SolarSystem(scene);
 
+// Dette er kun hvis VR er i scenen
 renderer.setAnimationLoop(render);
 
 function render(){
@@ -53,7 +60,8 @@ function render(){
 
     renderer.render(scene, camera);
 
-    //window.requestAnimationFrame(render);
+    // Hvis vi ikke har VR har vi denne
+    // window.requestAnimationFrame(render);
 }
 
 render();
