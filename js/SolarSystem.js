@@ -21,7 +21,7 @@ export class SolarSystem {
 
         this.centerOfSystem = new Object3D();
 
-        // this.centerOfSystem.position.setZ(-30); // Uncomment if VR is implemented
+        this.centerOfSystem.position.setZ(-30); // Uncomment if VR is implemented
         
         scene.add(this.centerOfSystem);
 
