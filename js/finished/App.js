@@ -1,9 +1,9 @@
 ﻿"use strict";
 
-import {PerspectiveCamera, Scene, WebGLRenderer} from "./build/three.module.js";
+import {PerspectiveCamera, Scene, WebGLRenderer} from "../build/three.module.js";
 import {SolarSystem} from "./SolarSystem.js";
-import {OrbitControls} from "./build/OrbitControls.js";
-import {VRButton} from "./build/VRButton.js";
+import {OrbitControls} from "../build/OrbitControls.js";
+import {VRButton} from "../build/VRButton.js";
 
 const width = window.innerWidth;
 const height= window.innerHeight;

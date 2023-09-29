@@ -1,6 +1,6 @@
 "use strict";
 
-import {ShaderMaterial} from "./build/three.module.js";
+import {ShaderMaterial} from "../build/three.module.js";
 
 // Egen-laget shader: extends ShaderMaterial, som gir oss en rekke forhåndsdefinerte uniform-variable og shader-funksjoner
 // Kan nå bruke denne som hvilket som helst annet materiale
