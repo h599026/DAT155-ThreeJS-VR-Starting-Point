@@ -9,7 +9,7 @@ import {
     Object3D, PointLight,
     SphereGeometry,
     TextureLoader, Vector2
-} from "./build/three.module.js";
+} from "../build/three.module.js";
 
 export class SolarSystem {
     constructor(scene) {
